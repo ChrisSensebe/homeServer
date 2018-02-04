@@ -1,7 +1,8 @@
 import * as express from 'express';
+import * as rootController from './controllers/root-controller';
 
 const app = express();
 
-app.get('/', (req, res, next) => res.end('hello world'));
+app.get('/', rootController.getRoot);
 
 module.exports = app;
