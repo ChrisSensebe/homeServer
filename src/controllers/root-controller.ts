@@ -1,1 +1,3 @@
-export const getRoot = (req, res) => res.send('hello world');
+export const getRoot = (req, res) => res.json({
+    message: 'Hello world'
+});
