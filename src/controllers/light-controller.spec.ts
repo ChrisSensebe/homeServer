@@ -7,4 +7,12 @@ describe('GET /lights', () => {
     it('should respond ok', (done: DoneCallback) => {
         request(app).get('/lights').expect(HTTP_STATUS_CODE.OK, done);
     });
+    it('should respond with json', (done: DoneCallback) => {
+        request(app)
+            .get('/lights')
+            .end((err, res) => {
+                expect(res.type).toBe('application/json');
+                done();
+            });
+    });
 });

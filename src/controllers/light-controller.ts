@@ -1,1 +1,1 @@
-export const getLights = (req, res) => res.send('lights');
+export const getLights = (req, res) => res.json({});
