@@ -5,5 +5,5 @@ COPY package*.json ./
 Run npm i --only=production
 ADD . /app
 RUN npm run build
-EXPOSE 8080
+EXPOSE 3000
 CMD ["npm", "start"]
