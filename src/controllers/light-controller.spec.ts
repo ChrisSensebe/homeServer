@@ -15,4 +15,12 @@ describe('GET /lights', () => {
                 done();
             });
     });
+    it('sould respond with light status', (done: DoneCallback) => {
+        request(app)
+            .get('/lights')
+            .end((err, res) => {
+                expect(res.body['1']).toBeDefined();
+                done();
+            });
+    });
 });
